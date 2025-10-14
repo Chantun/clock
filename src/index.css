@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+	background-color: #bababa;
+	transition: background-color 0.3s;
+}
+
+button {
+	width: 5vw;
+	height: 5vw;
+	min-width: 25px;
+	min-height: 25px;
+	border-radius: 100%;
+	position: fixed;
+	transition: background-color 0.3s;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	cursor: pointer;
+	background-color: #323232;
+}
+
+.theme-button {
+	bottom: 1%;
+	right: 1%;
+	-webkit-mask-image: url('assets/dark-mode-6682.svg');
+	mask-image: url('assets/dark-mode-6682.svg');
+}
+
+.clock-button {
+	bottom: 1%;
+	left: 1%;
+	-webkit-mask-image: url('assets/clock-svgrepo-com.svg');
+	mask-image: url('assets/clock-svgrepo-com.svg');
+}
+
+.clock-container {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #1a1a1a;
+	padding: 10px;
+	border-radius: 20px;
+	box-shadow: 0 0 20px #0004;
+	transition: background-color 0.3s;
+}
+
+.clock-section {
+	display: flex;
+	gap: 6px;
+}
+
+.separator {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.point {
+	width: 3vw;
+	height: 3vw;
+	border: solid 0.2em #b2b2b2;
+	/* background-color: #626262; */
+	border-radius: 100%;
+}
+
+.clock {
+	width: 3vw;
+	height: 3vw;
+	border-radius: 100%;
+	position: relative;
+	transition: background-color 0.3s;
+}
+
+.show-clock {
+	background-color: #62626264;
+}
+
+.stick {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 7%;
+	min-height: 1px;
+	background-color: #b2b2b2;
+	transform-origin: left center;
+	transition: all 0.3s;
+}
+
+.clock-array {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+main.dark {
+	background-color: #323232;
+}
+
+button.dark {
+	background-color: #f9f9f9;
+}
+
+.clock-container.dark {
+	background-color: #b2b2b2;
+	box-shadow: 0 0 50px #0007;
+}
+
+.stick.dark {
+	background-color: #1a1a1a;
+}
+
+.point.dark {
+	border: solid 0.2em #1a1a1a;
+}
+
+button:hover {
+	background-color: #e6437c;
+}
+
+@media screen and (max-width: 700px) {
+	.point {
+		border: solid 1px #b2b2b2;
+	}
+	.point.dark {
+		border: solid 1px #1a1a1a;
+	}
+}
